@@ -1,0 +1,12 @@
+[
+["1", "Business analyst"],
+["2", "Data scientist"],
+["3", "Database administrator"],
+["4", "Software developer"],
+["5", "Systems analyst"],
+["Business analyst", "Business analyst"],
+["Data scientist", "Data scientist"],
+["Database administrator", "Database administrator"],
+["Software developer", "Software developer"],
+["Systems analyst", "Systems analyst"]
+]

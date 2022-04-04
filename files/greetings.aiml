@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<category>
+        <pattern>^ HELLO ^</pattern>
+        <template><srai>HI</srai></template>
+    </category>
+    <category>
+        <pattern>^ Howdy ^</pattern>
+        <template><srai>HI</srai></template>
+    </category>    
+    <category>
+        <pattern>^ Hi ^</pattern>
+        <template><srai>HI</srai></template>
+    </category>
+    <category>
+        <pattern>^ SUP ^</pattern>
+        <template><srai>HI</srai></template>
+    </category>
+	<category>
+	    <pattern>HI</pattern>
+	    <template>Hello. My name is <bot name="name"/>. I am here to help you learn about different career options for computer science majors. <br/><br/>What is your name?</template>
+	</category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>WHAT IS YOUR NAME</that>
+        <template>Nice to meet you, <set name="name"><star/></set>
+        <br/><br/>At any type you can type BYE to end the conversation or enter HELP to see the instructions.
+        <br/><br/><srai>careers or quiz</srai></template>
+    </category>
+    
+    
+    <category>
+        <pattern>WHAT IS MY NAME</pattern>
+        <template>Your name is <get name="name"/>.</template>
+    </category>
+    
+    <category>
+        <pattern>^ HELP ^</pattern>
+        <template>I am a chatbot that can help you learn about differnt career options for Computer Science majors. 
+            <br/><br/>You can choose to learn about different careers or take a quiz and see your recommended career.
+            <br/><br/>You will be shown a list of different careers you can learn about. You can enter the career name or number to select the career.
+            <br/><br/>Once you select a career to learn about, you will be shown a list of topics. You can enter the career topic or number to select the topic.
+            <br/><br/>After you learn about the topic, you can choose to YES to learn about another topic for the same career, or NO to be given the option to select a different career.
+            <br/><br/>If you select YES to learn about a different career, you will be shown the list to select a different career.
+            <br/><br/>If you select NO to learning about a different carrer, I will wish you goodbye. 
+            <br/><br/>At any time you can type in HELP to see these instructions, or you can type in BYE to end the conversation.<br/>
+            <srai>CAREERS</srai></template>
+    </category>
+    
+    <category>
+        <pattern>careers or quiz</pattern>
+        <template>Would you like to learn about different careers or take a quiz to see your recommended career?
+        </template>
+    </category>
+    <category>
+        <pattern>career</pattern>
+        <that>^ Would you like to learn about different careers or take a quiz to see your recommended career ^</that>
+        <template><srai>careers</srai></template>
+    </category>
+    <category>
+        <pattern>^ career ^</pattern>
+        <that>^ Would you like to learn about different careers or take a quiz to see your recommended career ^</that>
+        <template><srai>career</srai></template>
+    </category>
+    <category>
+        <pattern>^ learn ^</pattern>
+        <that>^ Would you like to learn about different careers or take a quiz to see your recommended career ^</that>
+        <template><srai>career</srai></template>
+    </category>
+    <category>
+        <pattern>quiz</pattern>
+        <that>^ Would you like to learn about different careers or take a quiz to see your recommended career ^</that>
+        <template><srai>quiz SQL or C</srai></template>
+    </category>
+    <category>
+        <pattern>^ quiz ^</pattern>
+        <that>^ Would you like to learn about different careers or take a quiz to see your recommended career ^</that>
+        <template><srai>quiz</srai></template>
+    </category>
+    <category>
+        <pattern>^ recommend ^</pattern>
+        <that>^ Would you like to learn about different careers or take a quiz to see your recommended career ^</that>
+        <template><srai>quiz</srai></template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>^ Would you like to learn about different careers or take a quiz to see your recommended career ^</that>
+        <template>I'm sorry. I didn't understand that. Try entering CAREER or QUIZ.<br/><br/><srai>careers or quiz</srai></template>
+    </category>
+    
+    <category>
+        <pattern>quiz SQL or C</pattern>
+        <template>Do you prefer working with a data management language such as SQL or a programming language like C?</template>
+    </category>
+    <category>
+        <pattern>SQL</pattern>
+        <that>^ Do you prefer working with a data management language such as SQL or a programming language like C</that>
+        <template><srai>quiz hardware</srai></template>
+    </category>
+    <category>
+        <pattern>^ SQL ^</pattern>
+        <that>^ Do you prefer working with a data management language such as SQL or a programming language like C</that>
+        <template><srai>SQL</srai></template>
+    </category>
+    <category>
+        <pattern>^ DATA ^</pattern>
+        <that>^ Do you prefer working with a data management language such as SQL or a programming language like C</that>
+        <template><srai>SQL</srai></template>
+    </category>
+    <category>
+        <pattern>^ MANAGE ^</pattern>
+        <that>^ Do you prefer working with a data management language such as SQL or a programming language like C</that>
+        <template><srai>SQL</srai></template>
+    </category>
+    <category>
+        <pattern>C</pattern>
+        <that>^ Do you prefer working with a data management language such as SQL or a programming language like C</that>
+        <template><srai>recommend software developer</srai></template>
+    </category>
+    <category>
+        <pattern>^ c ^</pattern>
+        <that>^ Do you prefer working with a data management language such as SQL or a programming language like C</that>
+        <template><srai>C</srai></template>
+    </category>
+    <category>
+        <pattern>^ PROGRAM ^</pattern>
+        <that>^ Do you prefer working with a data management language such as SQL or a programming language like C</that>
+        <template><srai>C</srai></template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>^ Do you prefer working with a data management language such as SQL or a programming language like C</that>
+        <template>I'm sorry. I didn't understand that. Try entering SQL or C.<br/><br/><srai>quiz SQL or C</srai></template>
+    </category>
+    
+    <category>
+        <pattern>quiz hardware</pattern>
+        <template>Do you want a job that involves working with hardware?</template>
+    </category>
+    <category>
+        <pattern>YES</pattern>
+        <that>^ Do you want a job that involves working with hardware</that>
+        <template><srai>quiz long or short</srai></template>
+    </category>
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>^ Do you want a job that involves working with hardware</that>
+        <template><srai>YES</srai></template>
+    </category>
+    <category>
+        <pattern>^ YEAH ^</pattern>
+        <that>^ Do you want a job that involves working with hardware</that>
+        <template><srai>YES</srai></template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>^ Do you want a job that involves working with hardware</that>
+        <template><srai>quiz math</srai></template>
+    </category>
+    <category>
+        <pattern>^ NO ^</pattern>
+        <that>^ Do you want a job that involves working with hardware</that>
+        <template><srai>NO</srai></template>
+    </category>
+    <category>
+        <pattern>^ NAH ^</pattern>
+        <that>^ Do you want a job that involves working with hardware</that>
+        <template><srai>NO</srai></template>
+    </category>
+    <category>
+        <pattern>^ NOPE ^</pattern>
+        <that>^ Do you want a job that involves working with hardware</that>
+        <template><srai>NO</srai></template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>^ Do you want a job that involves working with hardware</that>
+            <template>I'm sorry. I didn't understand that. Try entering YES or NO.<br/><br/><srai>quiz hardare</srai></template>
+    </category>
+    
+    <category>
+        <pattern>quiz long or short</pattern>
+        <template>Do you prefer working day-to-day or long-term tasks?</template>
+    </category>
+    <category>
+        <pattern>short</pattern>
+        <that>^ DO YOU PREFER WORKING DAY DASH TO DASH DAY OR LONG DASH TERM TASKS</that>
+        <template><srai>recommend database administrator</srai></template>
+    </category>
+    <category>
+        <pattern>^ short ^</pattern>
+        <that>^ DO YOU PREFER WORKING DAY DASH TO DASH DAY OR LONG DASH TERM TASKS</that>
+        <template><srai>short</srai></template>
+    </category>
+    <category>
+        <pattern>^ day ^</pattern>
+        <that>^ DO YOU PREFER WORKING DAY DASH TO DASH DAY OR LONG DASH TERM TASKS</that>
+        <template><srai>short</srai></template>
+    </category>
+        <category>
+        <pattern>long</pattern>
+        <that>^ DO YOU PREFER WORKING DAY DASH TO DASH DAY OR LONG DASH TERM TASKS</that>
+        <template><srai>recommend systems analyst</srai></template>
+    </category>
+    <category>
+        <pattern>^ long ^</pattern>
+        <that>^ DO YOU PREFER WORKING DAY DASH TO DASH DAY OR LONG DASH TERM TASKS</that>
+        <template><srai>long</srai></template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>^ DO YOU PREFER WORKING DAY DASH TO DASH DAY OR LONG DASH TERM TASKS</that>
+        <template>I'm sorry. I didn't understand that. Try entering SHORT or LONG.<br/><br/><srai>quiz long or short</srai></template>
+    </category>
+    
+    <category>
+        <pattern>quiz math</pattern>
+        <template>Do you like advanced math?</template>
+    </category>
+        <category>
+        <pattern>YES</pattern>
+        <that>^ Do you like advanced math</that>
+        <template><srai>recommend data scientist</srai></template>
+    </category>
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>^ Do you like advanced math</that>
+        <template><srai>YES</srai></template>
+    </category>
+    <category>
+        <pattern>^ YEAH ^</pattern>
+        <that>^ Do you like advanced math</that>
+        <template><srai>YES</srai></template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>^ Do you like advanced math</that>
+        <template><srai>recommend business analyst</srai></template>
+    </category>
+    <category>
+        <pattern>^ NO ^</pattern>
+        <that>^ Do you like advanced math</that>
+        <template><srai>NO</srai></template>
+    </category>
+    <category>
+        <pattern>^ NAH ^</pattern>
+        <that>^ Do you like advanced math</that>
+        <template><srai>NO</srai></template>
+    </category>
+    <category>
+        <pattern>^ NOPE ^</pattern>
+        <that>^ Do you like advanced math</that>
+        <template><srai>NO</srai></template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>^ Do you like advanced math</that>
+            <template>I'm sorry. I didn't understand that. Try entering YES or NO.<br/><br/><srai>quiz math</srai></template>
+    </category>
+    
+    <category>
+        <pattern>recommend data scientist</pattern>
+        <template>Your recommended career is data scientist!<br/><br/><srai>careers or quiz</srai></template>
+    </category>
+    <category>
+        <pattern>recommend business analyst</pattern>
+        <template>Your recommended career is business analyst!<br/><br/><srai>careers or quiz</srai></template>
+    </category>
+    <category>
+        <pattern>recommend database administrator</pattern>
+        <template>Your recommended career is database administrator!<br/><br/><srai>careers or quiz</srai></template>
+    </category>
+    <category>
+        <pattern>recommend software developer</pattern>
+        <template>Your recommended career is software developer!<br/><br/><srai>careers or quiz</srai></template>
+    </category>
+    <category>
+        <pattern>recommend systems analyst</pattern>
+        <template>Your recommended career is systems analyst!<br/><br/><srai>careers or quiz</srai></template>
+    </category>
+    
+    
+    
+    
+    <category>
+	    <pattern>careers</pattern>
+	    <template>Here are some career options. 
+            <ol>
+    	        <li>Business Analyst</li>
+    	        <li>Data Scientist</li>
+    	        <li>Database Administrator</li>
+    	        <li>Software Developer</li>
+    	        <li>Systems Analyst</li>
+            </ol>
+            Enter the number or name of the career to learn more about it.
+	    </template>
+	</category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>^ ENTER THE NUMBER OR NAME OF THE CAREER TO LEARN MORE ABOUT IT</that>
+        <template>OK. Let's learn about being a <set name="career"><map name="careers"><star/></map></set>.<br/><srai>topics</srai></template>
+    </category>
+    
+    <category>
+        <pattern>topics</pattern>
+        <template>
+            <br/>Here are some topics you can learn about. 
+            <ol>
+                <li>Average Salary</li>
+                <li>Primary duties</li>
+                <li>Education</li>
+                <li>Training</li>
+                <li>Certifications</li>
+                <li>Skills</li>
+                <li>Work environment</li>
+                <li>How to become a <get name="career"></get></li>
+            </ol>
+            Enter the number or name of the topic to learn more about it.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>*</pattern>
+        <that>^ ENTER THE NUMBER OR NAME OF THE TOPIC TO LEARN MORE ABOUT IT</that>
+        <template><set name="topic"><map name="topics"><star/></map></set>.<br/><br/><srai>details</srai></template>
+    </category>
+    
+    <category>
+        <pattern>details</pattern>
+        <template><map name="details"><get name="career"></get> | <get name="topic"></get></map><br/><br/><srai>LEARN MORE TOPICS</srai></template>
+    </category>
+    
+    <category>
+        <pattern>LEARN MORE TOPICS</pattern>
+        <template>Would you like to learn more about a different topic?</template>
+    </category>
+    <category>
+        <pattern>YES</pattern>
+        <that>^ WOULD YOU LIKE TO LEARN MORE ABOUT A DIFFERENT TOPIC ^</that>
+        <template><srai>topics</srai></template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>^ WOULD YOU LIKE TO LEARN MORE ABOUT A DIFFERENT TOPIC ^</that>
+        <template><srai>LEARN MORE CAREERS</srai></template>
+    </category>
+        <category>
+        <pattern>NO</pattern>
+        <that>^ WOULD YOU LIKE TO LEARN MORE ABOUT A DIFFERENT TOPIC ^</that>
+        <template>I'm sorry. I didn't understand that. Try entering YES or NO.<br/><br/><srai>LEARN MORE CAREERS</srai></template>
+    </category>
+    
+    <category>
+        <pattern>LEARN MORE CAREERS</pattern>
+        <template>Would you like to learn more about a different career or take the quiz to see your recommended career?</template>
+    </category>
+    <category>
+        <pattern>YES</pattern>
+        <that>^ Would you like to learn more about a different career or take the quiz to see your recommended career ^</that>
+        <template><srai>careers</srai></template>
+    </category>
+    <category>
+        <pattern>YES</pattern>
+        <that>^ Would you like to learn more about a different career or take the quiz to see your recommended career ^</that>
+        <template><srai>careers or quiz</srai></template>
+    </category>
+    <category>
+        <pattern>^ career ^</pattern>
+        <that>^ Would you like to learn more about a different career or take the quiz to see your recommended career ^</that>
+        <template><srai>careers</srai></template>
+    </category>
+    <category>
+        <pattern>^ learn ^</pattern>
+        <that>^ Would you like to learn more about a different career or take the quiz to see your recommended career ^</that>
+        <template><srai>careers</srai></template>
+    </category>
+    <category>
+        <pattern>^ quiz ^</pattern>
+        <that>^ Would you like to learn more about a different career or take the quiz to see your recommended career ^</that>
+        <template><srai>quiz SQL or C</srai></template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>^ Would you like to learn more about a different career or take the quiz to see your recommended career ^</that>
+        <template><srai>bye</srai></template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>^ Would you like to learn more about a different career or take the quiz to see your recommended career ^</that>
+        <template>I'm sorry. I didn't understand that. Try entering YES or NO.<br/><br/><srai>LEARN MORE CAREERS</srai></template>
+    </category>
+    
+	<category>
+        <pattern>^ BYE ^</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    <category>
+        <pattern>^ QUIT ^</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    <category>
+        <pattern>^ STOP ^</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+    <category>
+        <pattern>BYE</pattern>
+        <template>It was nice to chat with you <get name="name"></get>.<br/><br/><srai>exit quiz</srai></template>
+    </category>
+    
+    <category>
+        <pattern>exit quiz</pattern>
+        <template>Would you consider taking a one question quiz to help us improve this chatbot before you leave?</template>
+    </category>
+    <category>
+        <pattern>YES</pattern>
+        <that>^ Would you consider taking a one question quiz to help us improve this chatbot before you leave ^</that>
+        <template><srai>exit quiz question</srai></template>
+    </category>
+    <category>
+        <pattern>^ YES ^</pattern>
+        <that>^ Would you consider taking a one question quiz to help us improve this chatbot before you leave ^</that>
+        <template><srai>yes</srai></template>
+    </category>
+    <category>
+        <pattern>^ YEAH ^</pattern>
+        <that>^ Would you consider taking a one question quiz to help us improve this chatbot before you leave ^</that>
+        <template><srai>YES</srai></template>
+    </category>
+    <category>
+        <pattern>^ YEA ^</pattern>
+        <that>^ Would you consider taking a one question quiz to help us improve this chatbot before you leave ^</that>
+        <template><srai>YES</srai></template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <that>^ Would you consider taking a one question quiz to help us improve this chatbot before you leave ^</that>
+        <template>OK. Thank you and have a good day.</template>
+    </category>
+    <category>
+        <pattern>^ NO ^</pattern>
+        <that>^ Would you consider taking a one question quiz to help us improve this chatbot before you leave ^</that>
+        <template>NO</template>
+    </category>
+    <category>
+        <pattern>^ NAH ^</pattern>
+        <that>^ Would you consider taking a one question quiz to help us improve this chatbot before you leave ^</that>
+        <template>NO</template>
+    </category>
+    <category>
+        <pattern>^ NOPE ^</pattern>
+        <that>^ Would you consider taking a one question quiz to help us improve this chatbot before you leave ^</that>
+        <template>NO</template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>^ Would you consider taking a one question quiz to help us improve this chatbot before you leave ^</that>
+        <template>I'm sorry. I didn't understand that. Try entering YES or NO.<br/><br/><srai>exit quiz</srai></template>
+    </category>
+    
+    <category>
+        <pattern>exit quiz question</pattern>
+        <template>What degree would you recommend for yourself and why?</template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <that>^ What degree would you recommend for yourself and why ^</that>
+        <template>Thank you for taking this quiz.<br/><br/>Have a great day!</template>
+    </category>
+        
+    
+</aiml>
